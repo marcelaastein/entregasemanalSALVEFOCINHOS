@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="formulario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a id="cadastro" href="cadastro.html">Cadastre-se</a>
+            <a id="login" href="index.html">Faça seu Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="centro">
+            <div class="lateralcentro">
+                <div class="criar_doacoa">
+                    <p class="titulocentro">Clique aqui para cadastrar sua necessidade!</p>
+                    <div class="botao" id="botao">
+                        <p class="botaoform">Cadastre aqui</p>
+                    </div>
+                </div>
+
+                <div class="doacao">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulário -->
+        <form class="formulario" id="formulario">
+            <button type="button" class="fechar" id="fechar">&times;</button> <!-- Botão de fechar -->
+            <h1 class="frase">Doações que precisamos</h1>
+            <label class="campo">
+                ONG:
+                <input type="text" class="input_campo" id="ong">
+            </label>
+            <label class="campo">
+                Nome Completo:
+                <input type="text" class="input_campo" id="nome">
+            </label>
+            <label class="campo">
+                Email:
+                <input type="text" class="input_campo" id="email">
+            </label>
+            <label class="campo">   
+                Produto:
+                <input type="text" class="input_campo" id="produto">
+            </label>
+            <input type="submit" class="enviar" id="enviar" value="Enviar">
+        </form>
+    </main>
+    <script src="formulario.js"></script>
+</body>
+</html>
