@@ -1,0 +1,197 @@
+body, h2, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: #8B4513; /* Marrom escuro */
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Garante que o cabeçalho esteja acima de outros elementos */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+#cadastro, #login {
+    background: #8B4513; /* Marrom escuro */
+    border: none;
+    color: #D2B48C; /* Bege */
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+#cadastro:hover, #login:hover {
+    background: #D2B48C; /* Bege */
+    color: #3e4345; /* Marrom escuro */
+}
+
+.criar_doacoa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lateralcentro {
+    font-family: Arial, sans-serif;
+    height: 100vh;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url('imagens/o-retrato-de-um-cao-labrador-preto-tirado\ \(1\).jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.doacao {
+    display: flex;
+    gap: 3%;
+}
+
+.lateralcentro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de opacidade */
+    z-index: 1; /* Coloca a película sobre a imagem, mas abaixo do conteúdo */
+}
+
+.titulocentro, .formulario {
+    position: relative; /* Garante que o conteúdo fique acima da película */
+    z-index: 2;
+}
+
+.botao {
+    cursor: pointer;
+    background-color: #8B4513; /* Marrom escuro */
+    color: #D2B48C; /* Bege */
+    padding: 5px;
+    height: 70%;
+    width: 80%;
+    border: none;
+    border-radius: 10px;
+    transition: background 0.3s, color 0.3s;
+    z-index: 2; /* Assegura que o botão esteja acima da película */
+    position: relative;
+    display: flex; /* Adiciona flexbox para centralização */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.botao:hover {
+    background: #D2B48C; /* Bege */
+    color: #3e4345; /* Marrom escuro */
+}
+
+.botaoform {
+    margin: 0; /* Remove a margem padrão do <p> */
+    text-align: center; /* Garante que o texto dentro do <p> também esteja centralizado */
+}
+
+.formulario {
+    display: none; 
+    position: fixed;
+    top: 20%;
+    left: 35%; /* Centraliza um pouco mais */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25vw; /* Largura mais estreita */
+    gap: 15px; /* Espaço reduzido entre os campos */
+    border: 3px solid #8B4513; /* Cor da borda */
+    background-color: #ffffff; /* Fundo mais claro e suave */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 15px; /* Preenchimento interno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.campo {
+    width: 100%; /* Ocupa toda a largura */
+    margin-bottom: 10px; /* Espaçamento inferior reduzido */
+    display: flex;
+    flex-direction: column; /* Rótulo acima do campo */
+    font-family: 'Poppins', sans-serif; /* Fonte moderna */
+    font-size: 0.9em; /* Tamanho da fonte do rótulo menor */
+}
+
+.input_campo {
+    border: 1px solid #8B4513; /* Borda com cor suave */
+    border-radius: 4px; /* Bordas arredondadas menores */
+    padding: 7px; /* Preenchimento interno menor */
+    width: 100%; /* Ajusta a largura do campo de entrada */
+    font-size: 0.8em; /* Tamanho da fonte do campo menor */
+    transition: border-color 0.3s; /* Transição suave na cor da borda */
+}
+
+.input_campo:focus {
+    border-color: #D2B48C; /* Cor da borda ao focar */
+    outline: none; /* Remove o contorno padrão */
+}
+
+.enviar {
+    background-color: #8B4513; /* Cor de fundo do botão */
+    color: #FFF; /* Texto em branco */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer;
+    padding: 8px; /* Preenchimento interno menor */
+    width: 100%; /* Ocupa toda a largura do formulário */
+    font-size: 0.9em; /* Tamanho da fonte do botão menor */
+    transition: background 0.3s, transform 0.3s; /* Transições suaves */
+}
+
+.enviar:hover {
+    background-color: #D2B48C; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Aumenta levemente o tamanho ao passar o mouse */
+}
+
+.titulocentro {
+    color: #ffffff; /* Cor do título */
+    font-family: 'Poppins', sans-serif; /* Fonte do título */
+    font-size: 1.4em; /* Tamanho do título reduzido */
+    margin-bottom: 15px; /* Espaçamento inferior do título */
+    text-align: center; /* Centraliza o título */
+}
+
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: #8B4513;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+    z-index: 2;
+}
+
+.fechar:hover {
+    color: #D2B48C;
+    transform: scale(1.1);
+}
+
+
+.frase {
+    font-family: 'Montserrat', sans-serif; /* Usando a nova fonte */
+    font-size: 1.8em; /* Tamanho do texto maior */
+    color: #000000; /* Cor do texto */
+    margin-bottom: 15px; /* Espaçamento inferior */
+    text-align: center; /* Centraliza o título */
+}

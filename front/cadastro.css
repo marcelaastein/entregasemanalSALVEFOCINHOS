@@ -1,0 +1,102 @@
+/* Aplica um estilo básico para todos os elementos da página, removendo margens e espaçamentos e definindo a fonte padrão. */
+* {
+    padding: 0%;
+    margin: 0%;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Estilo para a área principal da página. Define o fundo, a largura e altura ocupando toda a tela, e centraliza o conteúdo. */
+main {
+    background-color: #472a27;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo para a metade esquerda da página. Define um fundo amarelo, a largura ocupando metade da tela, e insere uma imagem de fundo. */
+.esquerda {
+    background-color: yellow;
+    width: 50vw;
+    height: 100vh;
+    background-image: url(imagens/cachorrooo.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Estilo para a metade direita da página. Centraliza o conteúdo vertical e horizontalmente e organiza-o em uma coluna. */
+.direita {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 19pt;
+}
+
+/* Estilo para a logo na metade direita. Define a largura da imagem como 35% da área disponível. */
+#imglogo {
+    width: 35%;
+}
+
+/* Estilo para o título na metade direita. Define uma margem inferior e a cor branca para o texto. */
+.titulo {
+    margin-bottom: 6%;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* Estilo para a seção de login na metade direita. Centraliza o conteúdo em uma coluna e define o espaçamento entre os elementos. */
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2vh;
+    margin-bottom: 20vh;
+}
+
+/* Estilo para os campos de entrada do login, arredondando as bordas e definindo o tamanho e espaçamento interno. */
+.campo_login {
+    border-radius: 10px;
+    border: none;
+    width: 32vh;
+    height: 6vh;
+    padding-left: 5%;
+}
+
+/* Estilo para o botão de "Entrar". Define a cor, tamanho, arredondamento das bordas e comportamento ao ser clicado. */
+.entrar {
+    background-color: #6B6F79;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0;
+    height: 5vh;
+    width: 20vh;
+    border-radius: 10px;
+    margin-left: 0%;
+}
+
+/* Estilo para a seção de criar uma conta. Centraliza o conteúdo, define o tamanho da fonte e a cor do texto. */
+.criar-conta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    color: #fff;
+    gap: 1vh;
+    font-size: 70%;
+}
+
+/* Estilo para o botão de cadastro, definindo a cor do texto. */
+.btcadastro {
+    color: aliceblue;
+}

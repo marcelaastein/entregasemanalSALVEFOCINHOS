@@ -1,0 +1,92 @@
+
+* {
+    padding: 0%;
+    margin: 0%;
+    font-family: "Poppins", sans-serif;
+}
+
+main {
+    background-color:#472a27;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.esquerda {
+    background-color: yellow;
+    width: 50vw;
+    height: 100vh;
+    background-image: url('imagens/foto-vertical-de-um-adoravel-filhote-de-labrador-chocolate-no-preto.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.direita {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 19pt;
+}
+
+#imglogo {
+    width: 35%;
+}
+
+.titulo{
+    margin-bottom: 6%;
+    font-weight: 500;
+    color: #fff;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2vh;
+    margin-bottom: 20vh;
+}
+
+.campo_login {
+    border-radius: 10px;
+    border: none;
+    width: 32vh;
+    height: 6vh;
+    padding-left: 5%;
+}
+
+.entrar {
+    background-color: #6B6F79;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0;
+    height: 5vh;
+    width: 20vh;
+    border-radius: 10px;
+    margin-left: 0%;
+}
+
+.criar-conta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+    color: #fff;
+    gap: 1vh;
+    font-size: 70%;
+}
+
+.btcadastro{
+    color: aliceblue;
+}
