@@ -107,79 +107,65 @@ nav {
     display: none; 
     position: fixed;
     top: 20%;
-    left: 30%;
+    left: 35%; /* Centraliza um pouco mais */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 40vw;
-    gap: 5vh;
-    border: 4px solid rgb(73, 20, 20);
-    background-color: beige;
-    border-radius: 10px;
-    height: 57vh;
-    z-index: 2000; /* Certifica-se de que o formulário esteja acima de tudo */
+    width: 25vw; /* Largura mais estreita */
+    gap: 15px; /* Espaço reduzido entre os campos */
+    border: 3px solid #8B4513; /* Cor da borda */
+    background-color: #ffffff; /* Fundo mais claro e suave */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 15px; /* Preenchimento interno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.campo {
+    width: 100%; /* Ocupa toda a largura */
+    margin-bottom: 10px; /* Espaçamento inferior reduzido */
+    display: flex;
+    flex-direction: column; /* Rótulo acima do campo */
+    font-family: 'Poppins', sans-serif; /* Fonte moderna */
+    font-size: 0.9em; /* Tamanho da fonte do rótulo menor */
 }
 
 .input_campo {
-    border: 1px solid rgb(73, 20, 20);
-    border-radius: 7px;
-    padding: 5px; /* Adiciona algum preenchimento interno para uma melhor aparência */
+    border: 1px solid #8B4513; /* Borda com cor suave */
+    border-radius: 4px; /* Bordas arredondadas menores */
+    padding: 7px; /* Preenchimento interno menor */
+    width: 100%; /* Ajusta a largura do campo de entrada */
+    font-size: 0.8em; /* Tamanho da fonte do campo menor */
+    transition: border-color 0.3s; /* Transição suave na cor da borda */
+}
+
+.input_campo:focus {
+    border-color: #D2B48C; /* Cor da borda ao focar */
+    outline: none; /* Remove o contorno padrão */
 }
 
 .enviar {
-    border: 4px solid rgb(73, 20, 20);
-    border-radius: 10px;
+    background-color: #8B4513; /* Cor de fundo do botão */
+    color: #FFF; /* Texto em branco */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Bordas arredondadas */
     cursor: pointer;
-    padding: 5px; /* Adiciona algum preenchimento interno para uma melhor aparência */
+    padding: 8px; /* Preenchimento interno menor */
+    width: 100%; /* Ocupa toda a largura do formulário */
+    font-size: 0.9em; /* Tamanho da fonte do botão menor */
+    transition: background 0.3s, transform 0.3s; /* Transições suaves */
+}
+
+.enviar:hover {
+    background-color: #D2B48C; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Aumenta levemente o tamanho ao passar o mouse */
 }
 
 .titulocentro {
-    color: #fff;
-}
-
-.button {
-    display: block;
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #ddd;
-    color: #fff;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.card_doacao {
-    background-color: #5C4033; /* Cor de fundo marrom */
-    width: 15vw; /* Largura relativa */
-    height: 30vh; /* Altura relativa */
-    margin: 10px auto; /* Margem automática para centralizar horizontalmente */
-    padding: 20px; /* Preenchimento interno aumentado */
-    border-radius: 10px; /* Bordas arredondadas */
-    display: flex; /* Flexbox para alinhamento de conteúdo */
-    flex-direction: column; /* Direção vertical dos itens */
-    justify-content: center; /* Alinhamento central vertical */
-    align-items: center; /* Alinhamento central horizontal */
-    gap: 1vh; /* Espaço entre os itens */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra sutil */
-    transition: transform 0.3s, box-shadow 0.3s; /* Transições suaves para transformações */
-}
-
-.card_doacao:hover {
-    transform: translateY(-10px); /* Levanta o card ao passar o mouse */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
-}
-
-.card_doacao h2 {
-    color: #D2B48C; /* Cor do texto do título */
-    margin-bottom: 10px; /* Espaçamento inferior */
-    font-size: 1.2em; /* Tamanho do texto */
-}
-
-.card_doacao p {
-    color: #fff; /* Cor do texto */
-    font-size: 1em; /* Tamanho do texto */
-    text-align: center; /* Alinha o texto ao centro */
+    color: #ffffff; /* Cor do título */
+    font-family: 'Poppins', sans-serif; /* Fonte do título */
+    font-size: 1.4em; /* Tamanho do título reduzido */
+    margin-bottom: 15px; /* Espaçamento inferior do título */
+    text-align: center; /* Centraliza o título */
 }
 
 
@@ -187,9 +173,25 @@ nav {
     position: absolute;
     top: 10px;
     right: 10px;
-    background: none;
+    background-color: transparent;
     border: none;
-    font-size: 20px;
+    color: #8B4513;
+    font-size: 1.5em;
     cursor: pointer;
-    color: #333;
+    transition: color 0.3s, transform 0.3s;
+    z-index: 2;
+}
+
+.fechar:hover {
+    color: #D2B48C;
+    transform: scale(1.1);
+}
+
+
+.frase {
+    font-family: 'Montserrat', sans-serif; /* Usando a nova fonte */
+    font-size: 1.8em; /* Tamanho do texto maior */
+    color: #000000; /* Cor do texto */
+    margin-bottom: 15px; /* Espaçamento inferior */
+    text-align: center; /* Centraliza o título */
 }
