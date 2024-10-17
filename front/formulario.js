@@ -1,8 +1,6 @@
 const usuario = usuario_logado = JSON.parse(localStorage.getItem('usuario'));
 console.log(usuario)
 
-
-
 // pega o botao e o formulario do html
 let botao = document.getElementById('botao');
 let formulario = document.getElementById('formulario')
@@ -16,12 +14,17 @@ if (usuario.tipo === 'doador') {
 }
 
 // quando clica no bota aparece o formulario
-botao.addEventListener('click',function(e){
+botao.addEventListener('click', function (e) {
     formulario.style.display = 'flex';
+
+    const usuarioLogado = usuario_logado = JSON.parse(localStorage.getItem('usuario'));
+
+    let emailLogado = document.getElementById('email').value = usuarioLogado.data.email;
+    let nomeLogado = document.getElementById('nome').value = usuarioLogado.data.nome;
 });
 
 // função pra criar o card da doação
-document.getElementById('formulario').addEventListener('submit', async function(e) {
+document.getElementById('formulario').addEventListener('submit', async function (e) {
     e.preventDefault();
 
     // puxa os campos do formulario
@@ -78,11 +81,11 @@ document.getElementById('formulario').addEventListener('submit', async function(
 
 // fechar
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const fecharBtn = document.getElementById('fechar');
     const formulario = document.getElementById('formulario');
 
-    fecharBtn.addEventListener('click', function() {
+    fecharBtn.addEventListener('click', function () {
         // Limpar os campos do formulário
         const inputs = formulario.querySelectorAll('.input_campo');
         inputs.forEach(input => input.value = '');
