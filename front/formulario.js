@@ -28,17 +28,18 @@ document.getElementById('formulario').addEventListener('submit', async function 
     e.preventDefault();
 
     // puxa os campos do formulario
-    let ong = document.getElementById('ong').value;
-    let nome_completo = document.getElementById('nome').value;
+    let ong = document.getElementById('nome').value;
     let email = document.getElementById('email').value;
     let produto = document.getElementById('produto').value;
 
     // Condição pra verificar se todos campos estão preenchidos
-    if (!ong || !nome_completo || !email || !produto) {
+    if (!ong || !email || !produto) {
         alert('Falta informações!');
     } else {
         // adiciona os dados que vão pro bd na lista "dados"
-        let dados = { ong, nome_completo, email, produto };
+        let dados = { ong, email, produto };
+
+        console.log(dados)
 
         const response = await fetch('http://localhost:3001/api/store/doacao', {
             method: 'POST',

@@ -10,13 +10,12 @@ async function storeDoacao(request, response) {
     // Pega as informações enviadas pelo usuário (como ONG, nome, email, e produto) e coloca em uma lista.
     const params = Array(
         request.body.ong,          // Nome da ONG que vai receber a doação.
-        request.body.nome_completo, // Nome completo da pessoa que está doando.
         request.body.email,         // Email da pessoa que está doando.
         request.body.produto,       // Produto que está sendo doado.
     );
 
     // Escreve o comando para salvar esses dados na tabela de doações no banco de dados.
-    const query = 'INSERT INTO doacoes(ong,nome_completo,email,produto) VALUES(?,?,?,?)';
+    const query = 'INSERT INTO doacoes(ong,email,produto) VALUES(?,?,?)';
 
     // Faz a operação de salvar no banco de dados.
     connection.query(query, params, (err, results) => {
