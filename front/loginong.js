@@ -19,15 +19,12 @@ entrar.onclick = async function (e) {
 
     if (content.success) {
         let tipo = 'ong';
-        let usuario = {
-            data: content.data[0],
-            tipo: tipo
-        };
+        let usuario = content.data[0].id
 
         
-        localStorage.setItem('usuario', JSON.stringify(usuario));
+        localStorage.setItem('usuario', usuario);
 
-        console.log(content.data[0])
+        console.log(usuario)
         alert('Sucesso!');
         window.location.href = 'formulario.html';
 

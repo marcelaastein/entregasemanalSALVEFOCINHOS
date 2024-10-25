@@ -58,15 +58,15 @@ document.getElementById('formulario').addEventListener('submit', async function 
             doacao.className = 'card_doacao';
 
             // adiciona o que foi configurado na variavel para enviar para o html com base nas variaveis do formulario
+            
             doacao.innerHTML = `
                 <p><b>Ong:</b> ${ong}</p>
-                <p><b>Nome completo:</b> ${nome_completo}</p>
                 <p><b>Email:</b> ${email}</p>
                 <p><b>Produto:</b> ${produto}</p>
             `;
 
             // puxa a div que vai ser adicionada o card de doação
-            document.querySelector('.doacao').appendChild(doacao);
+            document.getElementById('doacao').appendChild(doacao);
 
             // fecha o formulário novamente ao enviar
             document.getElementById('formulario').style.display = 'none';
