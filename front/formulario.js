@@ -58,11 +58,13 @@ document.getElementById('formulario').addEventListener('submit', async function 
             doacao.className = 'card_doacao';
 
             // adiciona o que foi configurado na variavel para enviar para o html com base nas variaveis do formulario
-            
+
             doacao.innerHTML = `
-                <p><b>Ong:</b> ${ong}</p>
-                <p><b>Email:</b> ${email}</p>
-                <p><b>Produto:</b> ${produto}</p>
+                <div class="card_doacao">
+                    <p><b>Ong:</b> ${ong}</p>
+                    <p><b>Email:</b> ${email}</p>
+                    <p><b>Produto:</b> ${produto}</p>
+                </div>
             `;
 
             // puxa a div que vai ser adicionada o card de doação
@@ -79,9 +81,7 @@ document.getElementById('formulario').addEventListener('submit', async function 
 
 });
 
-
 // fechar
-
 document.addEventListener('DOMContentLoaded', function () {
     const fecharBtn = document.getElementById('fechar');
     const formulario = document.getElementById('formulario');
@@ -96,3 +96,25 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+document.addEventListener('DOMContentLoaded', async () => {
+    const response = await fetch('http://localhost:3001/api/get/doacao');
+    const result = await response.json();
+
+    if (result.success) {
+        const listaDoacao = document.getElementById('doacao');
+        result.data.forEach(doacoes => {
+            const doacao = document.createElement('div');
+            doacao.className = 'card_doacao';
+            doacao.innerHTML = `
+                <div class="card_doacao">
+                    <p><b>Ong:</b> ${doacoes.ong}</p>
+                    <p><b>Email:</b> ${doacoes.email}</p>
+                    <p><b>Produto:</b> ${doacoes.produto}</p>
+                </div>
+            `;
+            listaDoacao.appendChild(doacao); // Certifique-se de adicionar cada doação à lista de doações no DOM
+        });        
+    } else {
+        console.log('erro', result.sql);
+    }
+});

@@ -195,3 +195,7 @@ nav {
     margin-bottom: 15px; /* Espaçamento inferior */
     text-align: center; /* Centraliza o título */
 }
+
+.card_doacao {
+    background-color: white;
+}

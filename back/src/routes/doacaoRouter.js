@@ -2,7 +2,7 @@ const { Router } = require('express');
 
 const router = Router();
 
-const { storeDoacao } = require('../controller/doacaoController');
+const { storeDoacao, getDoacao } = require('../controller/doacaoController');
 
 /**
 * @swagger
@@ -20,5 +20,7 @@ const { storeDoacao } = require('../controller/doacaoController');
 *                 type: object
 */
 router.post('/store/doacao', storeDoacao);
+
+router.get('/get/doacao', getDoacao);
 
 module.exports = router;

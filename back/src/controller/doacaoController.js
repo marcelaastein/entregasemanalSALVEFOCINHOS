@@ -41,7 +41,33 @@ async function storeDoacao(request, response) {
     });
 }
 
+async function getDoacao(request, response) {
+    const query = 'SELECT * FROM doacoes';
+
+    connection.query(query, (err, results) => {
+        if (results) {
+            response
+                .status(200)
+                .json({
+                    success: true,
+                    message: "Sucesso!",
+                    data: results
+                });
+        } else {
+            response
+                .status(400)
+                .json({
+                    success: false,
+                    message: "Ops, deu problema!",
+                    data: err
+                });
+        }
+    });
+}
+
+
 // Exporta a função 'storeDoacao' para que ela possa ser usada em outros arquivos do projeto.
 module.exports = {
-    storeDoacao
+    storeDoacao,
+    getDoacao
 };
