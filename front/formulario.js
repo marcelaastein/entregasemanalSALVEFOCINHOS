@@ -19,8 +19,8 @@ botao.addEventListener('click', function (e) {
 
     const usuarioLogado = usuario_logado = JSON.parse(localStorage.getItem('usuario'));
 
-    let emailLogado = document.getElementById('email').value = usuarioLogado.data.email;
-    let nomeLogado = document.getElementById('nome').value = usuarioLogado.data.nome;
+    // let emailLogado = document.getElementById('email').value = usuarioLogado.data.email;
+    // let nomeLogado = document.getElementById('nome').value = usuarioLogado.data.nome;
 });
 
 // função pra criar o card da doação

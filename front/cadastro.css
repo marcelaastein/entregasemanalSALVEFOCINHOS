@@ -41,6 +41,7 @@ main {
 /* Estilo para a logo na metade direita. Define a largura da imagem como 35% da área disponível. */
 #imglogo {
     width: 35%;
+    margin-top: 10%;
 }
 
 /* Estilo para o título na metade direita. Define uma margem inferior e a cor branca para o texto. */
