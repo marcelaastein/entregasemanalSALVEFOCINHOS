@@ -42,7 +42,7 @@ document.getElementById('formulario').addEventListener('submit', async function 
         console.log(dados)
 
         const response = await fetch('http://localhost:3001/api/store/doacao', {
-            method: 'POST',
+            method: 'POST',                                 
             headers: { 'Content-type': 'application/json;charset=UTF-8' },
             body: JSON.stringify(dados)
         });
