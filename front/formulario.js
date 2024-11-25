@@ -42,7 +42,7 @@ document.getElementById('formulario').addEventListener('submit', async function 
         console.log(dados)
 
         const response = await fetch('http://localhost:3001/api/store/doacao', {
-            method: 'POST',                                 
+            method: 'POST',
             headers: { 'Content-type': 'application/json;charset=UTF-8' },
             body: JSON.stringify(dados)
         });
@@ -60,12 +60,12 @@ document.getElementById('formulario').addEventListener('submit', async function 
             // adiciona o que foi configurado na variavel para enviar para o html com base nas variaveis do formulario
 
             doacao.innerHTML = `
-                <div class="card_doacao">
-                    <p><b>Ong:</b> ${ong}</p>
-                    <p><b>Email:</b> ${email}</p>
-                    <p><b>Produto:</b> ${produto}</p>
-                </div>
-            `;
+            <div class="card_doacao">
+                <p><b>Ong:</b> ${ong}</p>
+                <p><b>Instagram:</b> <a href="https://instagram.com/${email}" target="_blank">${email}</a></p>
+                <p><b>Produto:</b> ${produto}</p>
+            </div>
+        `;
 
             // puxa a div que vai ser adicionada o card de doação
             document.getElementById('doacao').appendChild(doacao);
@@ -108,12 +108,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             doacao.innerHTML = `
                 <div class="card_doacao">
                     <p><b>Ong:</b> ${doacoes.ong}</p>
-                    <p><b>Email:</b> ${doacoes.email}</p>
+                    <p><b>Instagram:</b> <a href="https://instagram.com/${doacoes.email}" target="_blank">${doacoes.email}</a></p>
                     <p><b>Produto:</b> ${doacoes.produto}</p>
                 </div>
             `;
             listaDoacao.appendChild(doacao); // Certifique-se de adicionar cada doação à lista de doações no DOM
-        });        
+        });
     } else {
         console.log('erro', result.sql);
     }

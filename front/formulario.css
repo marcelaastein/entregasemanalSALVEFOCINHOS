@@ -77,7 +77,7 @@ nav {
 
 .titulocentro, .formulario {
     position: relative; /* Garante que o conteúdo fique acima da película */
-    z-index: 2;
+    z-index: 100;
 }
 
 .botao {
@@ -201,9 +201,11 @@ nav {
 }
 
 .card_doacao {
-    background-color: rgb(255, 255, 255);
+    background-color:#000000;
     border-radius: 8%;
     width:180px;
     height: 90%;
     margin-top: 30px;
+    color: white;
+    z-index: 99;
 }
